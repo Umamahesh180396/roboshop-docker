@@ -5,12 +5,14 @@ networks:
 services:
   mongodb:
     image: mongodb:v1
+    build: ./mongodb
     container_name: mongodb
     networks:
       - roboshop
 
   catalogue:
     image: catalogue:v1
+    build: ./catalogue
     container_name: catalogue
     networks:
       - roboshop
@@ -25,6 +27,7 @@ services:
 
   user:
     image: user:v1
+    build: ./user
     container_name: user
     networks:
       - roboshop
@@ -34,6 +37,7 @@ services:
 
   web:
     image: web:v1
+    build: ./web
     container_name: web
     networks:
       - roboshop
