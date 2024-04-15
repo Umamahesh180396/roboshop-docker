@@ -1,5 +1,5 @@
 # Multi stage docker build
-FROM maven
+FROM maven AS build
 
 WORKDIR /opt/shipping
 
