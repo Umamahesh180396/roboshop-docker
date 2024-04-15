@@ -1,8 +1,5 @@
 # Multi stage docker build
-
-FROM debian:10 AS build
-
-RUN apt-get update -y && apt-get -y install maven
+FROM maven
 
 WORKDIR /opt/shipping
 
