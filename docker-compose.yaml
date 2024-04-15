@@ -92,3 +92,4 @@ services:
       - catalogue
       - user
       - shipping
+      - payment
