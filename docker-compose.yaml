@@ -31,12 +31,12 @@ services:
     depends_on:
       - mongodb
       - redis
-      
+
   web:
     image: web:v1
     container_name: web
     networks:
-      - robsoshop
+      - roboshop
     ports:
       - "80:80"
     depends_on:
