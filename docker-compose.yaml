@@ -45,6 +45,13 @@ services:
       - catalogue
       - redis
 
+  mysql:
+    image: mysql:v1
+    build: ./mysql
+    container_name: mysql
+    networks:
+      - roboshop
+    
   web:
     image: web:v1
     build: ./web
