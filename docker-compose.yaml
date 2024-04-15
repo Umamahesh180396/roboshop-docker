@@ -69,6 +69,17 @@ services:
     networks:
       - roboshop
 
+  payment:
+    image: payment:v1
+    build: ./payment
+    container_name: payment
+    networks:
+      - roboshop
+    depends_on:
+      - cart
+      - user
+      - rabbitmq
+
   web:
     image: web:v1
     build: ./web
