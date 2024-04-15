@@ -61,7 +61,7 @@ services:
     depends_on:
       - mysql
       - cart
-      
+
   web:
     image: web:v1
     build: ./web
@@ -73,3 +73,4 @@ services:
     depends_on:
       - catalogue
       - user
+      - shipping
